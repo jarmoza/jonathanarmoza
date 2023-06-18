@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Title -->
+	<title>Portfolio - Jonathan Armoza</title>
+
+	<!-- Tab icon -->
+	<link rel="shortcut icon" type="image/x-icon" href="jonathanarmoza.ico">
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+	<link href="https://fonts.googleapis.com/css2?family=EB+Garamond" rel="stylesheet">
+
+	<!-- Third party styles -->
+	<link rel="stylesheet" type="text/css" href="./lib/bootstrap-5.1.3-dist/css/bootstrap.min.css">	
+
+	<!-- Local styles -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/site.css">
+</head>
+
+<body>
+
+    <!-- Project list
+        TWiC
+        TWiC close reading
+        Topic modeling Emily Dickinson
+        NMF Emily Dickinson
+        NMF Moby Dick - Hayford's Duplicates
+        Othello network over time
+        Ezra pound project
+        Working from Scraps
+        Neurobagel - Annotation tool
+        Scribblenauts
+        Lock's Quest,
+        Civilization III,
+        Neuromod NLP project - Nature paper
+        Entity resolution data science blog
+    -->
+        
+    <div class="container-fluid pt-5">
+
+        <div class="row mx-auto gx-10">
+
+            <!-- Verticl nav for quick access to portfolio items -->
+            <div class="col-sm-3">
+                <div class="row">
+                    <nav class="nav flex-column">
+                        <a class="nav-link active" href="#digital-humanities">Digital Humanities</a>
+                        <a class="nav-link" href="#neuroscience">Neuroscience</a>
+                        <a class="nav-link" href="#games">Games</a>
+                    </nav>
+                </div>
+
+                <div class="row pt-3">
+                    <nav class="nav flex-column">
+                        <a class="nav-link active" href="./index.html"><span class="align-middle">&#x21A9;</span>&nbsp;Home</a>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Portfolio tiles -->
+            <div class="col-sm-9" id="portolio-tiles-column"></div>
+        </div>
+    </div>
+
+    <script src="./assets/json/portfolio.js"></script>
+
+    <script>
+
+        function injectTiles() {
+
+            // 0. Bootstrap column where tile html will be injected
+            const tilesColumn = document.getElementById("portolio-tiles-column");
+
+            // 1. Build a string of HTML content to inject into the tiles column
+            const tileSections = [];
+            Object.keys(tileContent).forEach(sectionID => {
+
+                // A. Section opening div tag
+                const tileHTML = [];
+                tileHTML.push(`<div id=${sectionID}>`);
+
+                // B. Each section tile
+                tileContent[sectionID].forEach(entry => {
+
+                    tileHTML.push(`
+                        <!-- Tile - ${entry.title.text} -->
+                        <div class="row h-25 pb-4">
+                            <div class="card h-25">
+                                <div class="row card-body py-0">
+
+                                    <div class="col-sm-8">
+                                        <div class="card-title">
+                                            <a href="${entry.title.link}">${entry.title.text} (${entry.title.date})</a>
+                                        </div> 
+                                        <p>
+                                            ${entry.body.textPreDots}
+                                            <span id="dots-${entry.id}">...</span>
+                                            <span id="more-${entry.id}" style="display: none;">${entry.body.textPostDots}</span>
+                                            <button class="px-0" onclick="readMore('dots-${entry.id}', 'more-${entry.id}', 'myBtn-${entry.id}')" id="myBtn-${entry.id}">Read more</button>
+                                        </p>                       
+                                    </div>
+
+                                    <div class="col-sm-4 align-middle text-center">
+                                        <img class='img-fluid card-image' src='${entry.image.link}' alt='${entry.image.altText}'>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`
+                    );
+                });
+
+                // C. Section end div tag
+                tileHTML.push("</div>");
+
+                // D. Save a string of all the tile HTML for this section
+                tileSections.push(tileHTML.join("\n"));
+            });
+
+            // 2. Inject all sections of tiles into the tiles column
+            tilesColumn.innerHTML = tileSections.join("\n");
+        };
+
+        function readMore(p_dotsID, p_moreTextID, p_buttonTextID) {
+
+            let dots = document.getElementById(p_dotsID);
+            let moreText = document.getElementById(p_moreTextID);
+            let buttonText = document.getElementById(p_buttonTextID);
+
+            if ( "none" === dots.style.display ) {
+
+                dots.style.display = "inline";
+                buttonText.innerHTML = "Read more";
+                moreText.style.display = "none";
+            } else {
+
+                dots.style.display = "none";
+                buttonText.innerHTML = "Read less";
+                moreText.style.display = "inline";
+            }
+        };
+
+        injectTiles();
+    </script>
+</body>
