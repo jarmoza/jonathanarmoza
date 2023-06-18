@@ -32,7 +32,7 @@ const tileContent = {
             },
             body: {
 
-                textPreDots: `'Working from Scraps' is a VueJS prototype that explores metadata gathered from the voluminous scrapbooks of Scottish national poet, <a href="https://en.wikipedia.org/wiki/Edwin_Morgan_(poet)">Edwin Morgan (1920-1910)</a>.
+                textPreDots: `'Working from Scraps' is a VueJS web app that explores metadata gathered from the voluminous scrapbooks of Scottish national poet, <a href="https://en.wikipedia.org/wiki/Edwin_Morgan_(poet)">Edwin Morgan (1920-1910)</a>.
                 The web app features multiple levels of exploration of metadata at the collection, book, and page level, allowing visitors to cross reference the many people, places, and objects found in the scrapbooks. `,
                 textPostDots: `A collaboration with researchers Bridget Moynihan and Anouk Lang at the University of Edinburgh, 'Working from Scraps' was funded by the government of Scotland.  Watch the <a href="https://vimeo.com/379640956">demo video</a> and view the <a href="https://github.com/jarmoza/working-from-scraps-source">source code</a>.`
             },

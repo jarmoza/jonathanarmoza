@@ -53,18 +53,18 @@ button {
     font-size: 1em;    
 }
 
+.card-image {
+
+    display: inline-block;
+    max-width: 50%;
+}
+
 .card-title {
 
     font-display: block;
     font-family: "EB Garamond", Georgia, Times, serif;
     font-size: 1.5em;
     font-weight: bold;
-}
-
-.card-image {
-
-    display: block;
-    max-width: 50%;
 }
 
 .nav-link {
