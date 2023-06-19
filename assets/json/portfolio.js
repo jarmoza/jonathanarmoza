@@ -8,10 +8,16 @@ const tileContent = {
 
                 text: "Hayford's Duplicates: Cobbling a Model of Melville's <i>Moby-Dick</i>",
                 date: "2017, 2023",
-                link: "http://digitaldecoupage.llc.ed.ac.uk/context/"
+                link: "https://www.degruyter.com/document/doi/10.1515/9783110781502-008/html"
             },
             body: {
 
+                links: {
+
+                    "Main site": "",
+                    "Code and visualizations": "",
+                    "Publication": ""
+                },
                 textPreDots: `Famed Melville scholar, Harrison Hayford, once speculated on the multiple draft stages <i>Moby-Dick</i> underwent during its writing. 'Hayford's Duplicates' takes these ideas and uses nonnegative matrix factorization to model the novel as a way of proofing Hayford's ideas.`,
                 textPostDots: `The work includes several visualizations that help tease apart the modeled draft stages and focuses on the character Queequeg. This project was first conceived in 2017 and through a series of iterations and talks became a <a href="https://www.degruyter.com/document/doi/10.1515/9783110781502-008/html">chapter</a> in the book <i>Computational Stylistics in Poetry, Prose, and Drama</i> (2023). <a href="https://github.com/jarmoza/hayfords_duplicates">Code and visualizations</a>.`
             },
@@ -32,7 +38,7 @@ const tileContent = {
             },
             body: {
 
-                textPreDots: `'Working from Scraps' is a VueJS web app that explores metadata gathered from the voluminous scrapbooks of Scottish national poet, <a href="https://en.wikipedia.org/wiki/Edwin_Morgan_(poet)">Edwin Morgan (1920-1910)</a>.
+                textPreDots: `'Working from Scraps' is a VueJS web app that explores metadata gathered from the voluminous scrapbooks of Scottish national poet, <a href="https://en.wikipedia.org/wiki/Edwin_Morgan_(poet)">Edwin Morgan (1920-2010)</a>.
                 The web app features multiple levels of exploration of metadata at the collection, book, and page level, allowing visitors to cross reference the many people, places, and objects found in the scrapbooks. `,
                 textPostDots: `A collaboration with researchers Bridget Moynihan and Anouk Lang at the University of Edinburgh, 'Working from Scraps' was funded by the government of Scotland.  Watch the <a href="https://vimeo.com/379640956">demo video</a> and view the <a href="https://github.com/jarmoza/working-from-scraps-source">source code</a>.`
             },
