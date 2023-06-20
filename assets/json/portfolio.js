@@ -3,6 +3,28 @@ const tileContent = {
     "digital-humanities": [
 
         {
+            id: "aolm",
+            title: {
+
+                text: "The Art of Literary Modeling",
+                date: "2018-present",
+                link: "https://github.com/jarmoza/aolm"
+            },
+            body: {
+
+                links: {},
+                textPreDots: `My PhD dissertation on the qualities of 'literary' modeling for digital humanities. Works examined include an array of 19th century American literature:
+                large collections from Hathi Trust and Project Gutenberg, the poems of Emily Dickinson, Melville's <i>Moby-Dick</i>, and the autobiography of Mark Twain.`,
+                textPostDots: `Previews of some of the ideas in this work can be found on my <a href="https://jonathantalks.substack.com">blog</a>.`
+            },
+            image: {
+
+                link: "./assets/images/aolm_pollan_interior.jpg",
+                altText: "Interior of Michael Pollan's writing house"
+            }
+        },
+
+        {
             id: "hayford",
             title: {
 
@@ -46,6 +68,37 @@ const tileContent = {
 
                 link: "./assets/images/wfs_scrapbook9_cover_icon.png",
                 altText: "Working from scraps frontpage"
+            }
+        },
+
+        {
+            id: "tcr",
+            title: {
+
+                text: "TWiC - Close Reading",
+                date: "2017",
+                link: "https://github.com/jarmoza/twic_close_reading"
+            },
+            body: {
+
+                textPreDots: `'TWiC - Close Reading' is a lightweight, browser-based
+                tool to look at the lowest levels of a topic model and to make quick
+                assessments of what topic words are present in the documents of a
+                corpora as well as their statistical weight in a document, topic, and
+                collection. Based on the originating idea of
+                <a href="https://github.com/jarmoza/twic2">my more complex D3.js
+                visualization, 'Topic Words in Context',</a> &mdash; of understanding the
+                topic words of a topic model in their original textual contexts,`,
+                textPostDots: `'TWiC - Close Reading' stays focused on that original context,
+                taking the outputs of an LDA-style topic model and using a Python
+                script to generate an array of simple HTML files for local viewing
+                and interactions that link topic words together and make clear where
+                they rank in the model.`
+            },
+            image: {
+
+                link: "./assets/images/tcr_magnifying_glass.png",
+                altText: "Screenshot of TWiC Close Reading looking at Melville's Moby-Dick"
             }
         },
 
@@ -96,8 +149,155 @@ const tileContent = {
     ],
     "neuroscience": [
 
+        {
+            id: "neurobagel",
+            title: {
+
+                text: "Neurobagel",
+                date: "2021-present",
+                link: "https://github.com/neurobagel"
+            },
+            body: {
+
+                links: {
+
+                    "Main site": "",
+                    "Code and visualizations": "",
+                    "Publication": ""
+                },
+                textPreDots: `'Neurobagel' is a deployable Nuxt.js and Python tool ecosystem and metadata standard that facilitates 
+                the annotating and federated querying of neuroscience imaging and phenotypic datasets, and ultimately,
+                the construction of cross-dataset cohorts of subjects for new research projects.`,
+                textPostDots: `Based in <a href="https://neurodatascience.github.io/">Origami Lab</a> at the Montréal Neurological Institute, the project's goal is to aid neuroscience and related researchers in reusing and contributing data to the broader scientific community. The team is led
+                by Dr. Jean-Baptiste Poline and began as a collaboration between <a href="https://www.surchs.com/">Sebastian Urchs</a> and myself.`
+            },
+            image: {
+
+                link: "./assets/images/neurobagel_brain_bagel.png",
+                altText: "Neurobagel pixel art logo prototype"
+            }
+        },
+        
+        {
+            id: "neuromod",
+            title: {
+
+                text: "Neuromod: Language Task",
+                date: "2017-2021",
+                link: "https://www.nature.com/articles/s41597-023-02015-3"
+            },
+            body: {
+
+                links: {
+
+                },
+                textPreDots: `The Courtois-Neuromod is a multi-year project that observes human brain activity while experiencing different kinds of media and attempts to transform such response into AI models.
+                The language component of the project - a collaboration between myself, Valentina Borghesani, and Simona Brambatti - had subjects make semantic connections between word triples.
+                My role was to consult on experiment design, and implement rich data generation in Python via multiple NLP criteria and sources. Subject responses to the stimuli were then 
+                compared to the responses from a number of wordneuropsychological datasets and ` ,
+                textPostDots: ""
+            },
+            image: {
+
+                link: "./assets/images/neuromod_language_task_icon.png",
+                altText: "Courtois-Neuromod language task icon"
+            }
+        },
+
+        {
+            id: "dashqc",
+            title: {
+
+                text: "dashQC: An interactive quality control dashboard",
+                date: "2017-2018",
+                link: "https://github.com/SIMEXP/dashQC_fmri"
+            },
+            body: {
+
+                links: {
+
+                },
+                textPreDots: `'dashQC' is a modular, JavaScript-based dashboard built to facilitate the manual quality control process of functional MRI data
+                It takes preprocessed neuroimaging and makes the images viewable for comparison, quality rating, and problem-area tagging.`,
+                textPostDots: `Developed as a project at Dr. Pierre Bellec's Simexp Lab at the Centre de Recherche Institut Universitaire de gériatrie de Montréal,
+                'dashQC' is an early collaboration between neuroscience researcher Sebastian Urchs and myself.`
+            },
+            image: {
+
+                link: "./assets/images/dashqc_brain_fmri_slices.png",
+                altText: "fMRI image of nine slices of a brain"
+            }
+        }
     ],
     "games": [
 
+        {
+            id: "scribblenauts",
+            title: {
+
+                text: "Scribblenauts",
+                date: "2009",
+                link: "https://en.wikipedia.org/wiki/Scribblenauts"
+            },
+            body: {
+
+                links: {
+
+                },
+                textPreDots: "",
+                textPostDots: ""
+            },
+            image: {
+
+                link: "./assets/images/scribblenauts_jonathan_armoza.png",
+                altText: "Jonathan Armoza as character in Scribblenauts"
+            }
+        },
+
+        {
+            id: "locks-quest",
+            title: {
+
+                text: "Lock's Quest",
+                date: "2008",
+                link: "https://en.wikipedia.org/wiki/Lock%27s_Quest"
+            },
+            body: {
+
+                links: {
+
+                },
+                textPreDots: "",
+                textPostDots: ""
+            },
+            image: {
+
+                link: "./assets/images/locks_quest_lock.png",
+                altText: "Lock from Lock's Quest"
+            }            
+        },
+
+        {
+            id: "civ3",
+            title: {
+
+                text: "Sid Meier's Civilization III",
+                date: "2001",
+                link: "https://en.wikipedia.org/wiki/Civilization_III"
+            },
+            body: {
+
+                links: {
+
+                },
+                textPreDots: "",
+                textPostDots: ""
+            },
+            image: {
+
+                link: "./assets/images/civ3_babel.jpg",
+                altText: "Tower of Babel image used in Civilization III"
+            }            
+        }
     ]
 };
