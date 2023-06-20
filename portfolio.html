@@ -96,7 +96,7 @@
                             <div class="card h-25">
                                 <div class="row card-body py-0">
 
-                                    <div class="col-sm-8 px-0">
+                                    <div class="col-sm-9 px-0">
                                         <div class="card-title">
                                             <a href="${entry.title.link}">${entry.title.text} (${entry.title.date})</a>
                                         </div> 
@@ -109,7 +109,7 @@
                                     </div>
                                     
                                     <div class="col-sm-3 mx-0 px-0 align-middle text-center">
-                                        <img class='img-fluid card-image align-middle text-center' src='${entry.image.link}' alt='${entry.image.altText}'>
+                                        <img class="img-fluid card-image" src="${entry.image.link}" alt="${entry.image.altText}">
                                     </div>                                     
                                 </div>
                             </div>
@@ -130,9 +130,9 @@
 
         function readMore(p_dotsID, p_moreTextID, p_buttonTextID) {
 
-            let dots = document.getElementById(p_dotsID);
-            let moreText = document.getElementById(p_moreTextID);
-            let buttonText = document.getElementById(p_buttonTextID);
+            const dots = document.getElementById(p_dotsID);
+            const moreText = document.getElementById(p_moreTextID);
+            const buttonText = document.getElementById(p_buttonTextID);
 
             if ( "none" === dots.style.display ) {
 
