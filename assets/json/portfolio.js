@@ -191,7 +191,7 @@ const tileContent = {
                 links: {
 
                 },
-                textPreDots: `'Neuromod' is a multi-year project that observes human brain activity while experiencing different kinds of media and attempts to transform such response into AI models.
+                textPreDots: `'Neuromod' is a multi-year project based at CRIUGM under the direction of Pierre Bellec that observes human brain activity while experiencing different kinds of media and attempts to transform such response into AI models.
                 The language component of the project - a collaboration between myself, Valentina Borghesani, and Simona Brambatti - had subjects make semantic connections between word triples.
                 My role was to consult on experiment design, and implement rich data generation in Python via multiple NLP criteria and sources. Subject responses to the stimuli were then 
                 compared to the responses from a number of wordneuropsychological datasets and ` ,
