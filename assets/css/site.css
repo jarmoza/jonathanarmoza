@@ -1,7 +1,7 @@
 /* Tags */
 a {
 
-    color: red;
+    color: indianred;
     text-decoration: none;
 }
 
@@ -32,6 +32,16 @@ button {
     color: red;
     font-size: 2.5em;
     line-height: 1.0;
+}
+
+.heading {
+
+    color: red;
+}
+
+.plain-text {
+
+    color: black;
 }
 
 .vertical-center {
@@ -69,6 +79,8 @@ button {
 
 .nav-link {
 
+    /* Overrides nav-pill background */
+    background-color: rgb(243,220,212) !important;
     color: black;
     font-display: block;
     font-family: "EB Garamond", Georgia, Times, serif;
@@ -80,7 +92,12 @@ button {
 
 .nav-link.active {
 
-    color: red;
+    color: indianred !important;
+}
+
+.active-nav {
+
+    color: indianred;
 }
 
 #more {
