@@ -86,6 +86,8 @@
 
     <script>
 
+        // 0. Function definitions
+
         function injectTiles() {
 
             // 0. Bootstrap column where tile html will be injected
@@ -93,7 +95,7 @@
 
             // 1. Build a string of HTML content to inject into the tiles column
             const tileSections = [];
-            const firstTabWritten = false;
+            let firstTabWritten = false;
             Object.keys(tileContent).forEach(sectionID => {
 
                 // A. Section opening div tag
@@ -195,6 +197,21 @@
             }
         };
 
+        // 1. Add navbar click handlers
+        Array.from(document.getElementsByClassName("nav-link")).forEach(element => {
+
+            element.addEventListener("click", () => {
+
+                Array.from(document.getElementsByClassName("nav-link")).forEach(element => {
+
+                    element.classList.remove("active");
+                });
+
+                element.classList.add("active");
+            });
+        });
+
+        // 2. Add portfolio tiles
         injectTiles();
     </script>
 </body>
