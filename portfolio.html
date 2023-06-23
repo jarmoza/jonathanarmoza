@@ -51,7 +51,7 @@
         <div class="row mx-auto gx-10 py-5">
 
             <!-- Verticl nav for quick access to portfolio items -->
-            <div class="col-sm-3 sticky-top">
+            <div class="col-sm-2 col-md-2 sticky-top">
                 <div class="row sticky-top">
                     <ul class="nav nav-pills flex-column" id="myTab" role="tablist">
                         <li class="nav-item">
@@ -74,7 +74,7 @@
             </div>
 
             <!-- Portfolio tiles -->
-            <div class="col-sm-9 tab-content"
+            <div class="col-sm-10 tab-content"
                 id="portolio-tiles-column"
                 data-bs-spy="scroll"
                 data-bs-target="#myTab"
@@ -87,6 +87,17 @@
     <script>
 
         // 0. Function definitions
+
+        function detectMobile() {
+        
+            return ( navigator.userAgent.match(/Android/i )
+                || navigator.userAgent.match(/webOS/i)
+                || navigator.userAgent.match(/iPhone/i)
+                || navigator.userAgent.match(/iPad/i)
+                || navigator.userAgent.match(/iPod/i)
+                || navigator.userAgent.match(/BlackBerry/i)
+                || navigator.userAgent.match(/Windows Phone/i));
+        }
 
         function injectTiles() {
 
@@ -131,40 +142,61 @@
                     const screenshotsString = screenshotsTags.join("\n");
 
                     // III. Add new portfolio tile to section
-                    tileHTML.push(`
-                        <!-- Tile - ${entry.title.text} -->
-                        <div class="row h-25 pb-4">
-                            <div class="card h-25">
 
-
-                                <div class="row card-body py-0">
-
-                                    <div class="col-sm-9 px-0">
-                                        <div class="card-title heading mb-0">
-                                            ${entry.title.text} (${entry.title.date})
-                                        </div>
-                                        <span class="pb-1" style="display: inline-block;">
-                                            ${linksString}
-                                        </span>
-                                        <p class="mb-0">
-                                            ${entry.body.text}
-                                            <!-- <div style="padding-right: 1em !important;">
-                                                <div class="d-flex justify-content-end">
-                                                    <button onclick="screenshots('dots-${entry.id}', 'screenshots-${entry.id}', 'myBtn-${entry.id}')" id="myBtn-${entry.id}">View screenshots</button>
-                                                    <span id="dots-${entry.id}">...</span>
-                                                </div>
-                                                <span id="screenshots-${entry.id}" style="display: none;">${screenshotsString}</span>
-                                            </div> -->
-                                        </p>                       
-                                    </div>
-            
-                                    <div class="col-sm-3 mx-0 px-0 align-middle text-center">
-                                        <img class="img-fluid card-image pt-2" src="${entry.image.link}" alt="${entry.image.altText}">
-                                    </div>                                     
-                                </div>
+                    // A. Card body
+                    const cardTitleAndTextTag = `
+                        <div class="col-sm-9 px-0">
+                            <div class="card-title heading mb-0">
+                                ${entry.title.text} (${entry.title.date})
                             </div>
-                        </div>`
-                    );
+                            <span class="pb-1" style="display: inline-block;">${linksString}</span>
+                            <p class="mb-0">
+                                ${entry.body.text}
+                                <!-- <div style="padding-right: 1em !important;">
+                                    <div class="d-flex justify-content-end">
+                                        <button onclick="screenshots('dots-${entry.id}', 'screenshots-${entry.id}', 'myBtn-${entry.id}')" id="myBtn-${entry.id}">View screenshots</button>
+                                        <span id="dots-${entry.id}">...</span>
+                                    </div>
+                                    <span id="screenshots-${entry.id}" style="display: none;">${screenshotsString}</span>
+                                </div> -->
+                            </p>                       
+                        </div>`;
+
+                    // B. Card image
+                    const cardImageTag = `
+                        <div class="col-sm-3 mx-0 px-0 align-middle text-center">
+                            <img class="img-fluid card-image pt-2" src="${entry.image.link}" alt="${entry.image.altText}">
+                        </div>`;
+
+                    // A. Mobile
+                    if ( detectMobile() ) {
+
+                        tileHTML.push(`
+                            <!-- Tile - ${entry.title.text} -->
+                            <div class="row h-25 pb-4">
+                                <div class="card h-25">
+                                    <div class="row card-body py-0">
+                                        ${cardImageTag}${cardTitleAndTextTag}                                       
+                                    </div>
+                                </div>
+                            </div>`
+                        );                        
+
+                    }
+                    // B. Desktop
+                    else {
+
+                        tileHTML.push(`
+                            <!-- Tile - ${entry.title.text} -->
+                            <div class="row h-25 pb-4">
+                                <div class="card h-25">
+                                    <div class="row card-body py-0">
+                                        ${cardTitleAndTextTag}${cardImageTag}
+                                    </div>
+                                </div>
+                            </div>`
+                        );                         
+                    }
                 });
 
                 // C. Section end div tag
