@@ -6,6 +6,7 @@ const tileContent = {
             id: "aolm",
             title: {
 
+                short: "The Art of Literary Modeling",
                 text: "The Art of Literary Modeling",
                 date: "2018-present"
             },
@@ -34,6 +35,7 @@ const tileContent = {
             id: "hayford",
             title: {
 
+                short: "Hayford's Duplicates",
                 text: "Hayford's Duplicates: Cobbling a Model of Melville's <i>Moby-Dick</i>",
                 date: "2017, 2023"
             },
@@ -69,6 +71,7 @@ const tileContent = {
             id: "wfs",
             title: {
 
+                short: "Working from Scraps",
                 text: "Working from Scraps",
                 date: "2017-2018"
             },
@@ -105,6 +108,7 @@ const tileContent = {
             id: "dickinson-topic-model",
             title: {
 
+                short: "Dickinson, the Fascicle, and the Topic Model",
                 text: "Dickinson, the Fascicle, and the Topic Model",
                 date: "2016"
             },
@@ -134,6 +138,7 @@ const tileContent = {
             id: "tcr",
             title: {
 
+                short: "TWiC Close Reading",
                 text: "TWiC - Close Reading",
                 date: "2017"
             },
@@ -171,6 +176,7 @@ const tileContent = {
             id: "twic",
             title: {
 
+                short: "Topic Words in Context",
                 text: "Topic Words in Context",
                 date: "2014-2015"
             },
@@ -204,6 +210,7 @@ const tileContent = {
             id: "neurobagel",
             title: {
 
+                short: "Neurobagel",
                 text: "Neurobagel",
                 date: "2021-present"
             },
@@ -216,6 +223,7 @@ const tileContent = {
                 by Dr. Jean-Baptiste Poline and began as a collaboration between <a href="https://www.surchs.com/">Sebastian Urchs</a> and myself.`,
                 links: {
 
+                    "Main site": "https://neurobagel.org",
                     "Source code and documentation": "https://github.com/neurobagel"
                 },
                 screenshots: {
@@ -233,6 +241,7 @@ const tileContent = {
             id: "neuromod",
             title: {
 
+                short: "Neuromod language task",
                 text: "Neuromod: Language Task",
                 date: "2017-2021"
             },
@@ -263,6 +272,7 @@ const tileContent = {
             id: "dashqc",
             title: {
 
+                short: "dashQC",
                 text: "dashQC: An interactive quality control dashboard",
                 date: "2017-2018"
             },
@@ -293,6 +303,7 @@ const tileContent = {
             id: "scribblenauts",
             title: {
 
+                short: "Scribblenauts",
                 text: "Scribblenauts",
                 date: "2009"
             },
@@ -322,6 +333,7 @@ const tileContent = {
             id: "locks-quest",
             title: {
 
+                short: "Lock's Quest",
                 text: "Lock's Quest",
                 date: "2008"
             },
@@ -353,6 +365,7 @@ const tileContent = {
             id: "civ3",
             title: {
 
+                short: "Civilization III",
                 text: "Sid Meier's Civilization III",
                 date: "2001" 
             },
