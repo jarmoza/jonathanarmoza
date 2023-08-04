@@ -128,7 +128,7 @@ const tileContent = {
             image: {
 
                 link: "./assets/images/dickinson-topic-model-portrait.png",
-                altText: "Dickinson's Fascicle 21 in TWiC's publication view",
+                altText: "A portrait phot of Emily Dickinson",
             }
         },
     ],
@@ -264,7 +264,7 @@ const tileContent = {
             image: {
 
                 link: "./assets/images/neuromod_language_task_icon.png",
-                altText: "Courtois-Neuromod language task icon"
+                altText: "Courtois-Neuromod language task icon - a head in silhouette with letters floating inside of it"
             }
         },
 
