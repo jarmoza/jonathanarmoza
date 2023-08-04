@@ -18,6 +18,8 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 	<link href="https://fonts.googleapis.com/css2?family=EB+Garamond" rel="stylesheet">
 
+    <!-- Stylesheets -->
+
 	<!-- Third party styles -->
 	<link rel="stylesheet" type="text/css" href="./lib/bootstrap-5.1.3-dist/css/bootstrap.min.css">	
 
@@ -45,6 +47,8 @@
         DONE - Neuromod NLP project - Nature paper
         Entity resolution data science blog
     -->
+
+    <!-- Next up - Adapt different desktop screen sizes -->
         
     <div class="container-fluid">
 
@@ -55,20 +59,20 @@
                 <div class="row sticky-top">
                     <ul class="nav nav-pills flex-column" id="myTab" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#digital-humanities">Digital Humanities</a>
+                            <a class="nav-link active" href="#digital-humanities" title="Digital humanities projects" tabindex="1" accesskey="d">Digital Humanities</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#tools">Visualization Tools</a>
+                            <a class="nav-link" href="#tools" title="Data visualization projects" tabindex="2" accesskey="v">Visualization Tools</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#neuroscience">Neuroscience</a>
+                            <a class="nav-link" href="#neuroscience" title="Neuroscience projects" tabindex="3" accesskey="n">Neuroscience</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#games">Games</a>
+                            <a class="nav-link" href="#games" title="Computer and video games" tabindex="4" accesskey="g">Games</a>
                         </li>
                     </ul>
                     <nav class="nav flex-column">
-                        <a class="nav-link active-nav" href="./index.html"><span class="align-middle">&#x21A9;</span>&nbsp;Home</a>
+                        <a class="nav-link active-nav" href="./index.html" title="Back to home page" tabindex="5" accesskey="h"><span class="align-middle">&#x21A9;</span>&nbsp;Home</a>
                     </nav>
                 </div>
             </div>
@@ -107,6 +111,7 @@
             // 1. Build a string of HTML content to inject into the tiles column
             const tileSections = [];
             let firstTabWritten = false;
+            var tabIndex = 6;
             Object.keys(tileContent).forEach(sectionID => {
 
                 // A. Section opening div tag
@@ -129,7 +134,8 @@
                     const linkCount = Object.keys(entry.body.links).length;
                     Object.keys(entry.body.links).forEach(linkID => {
 
-                        linksTags.push(`<a href="${entry.body.links[linkID]}">${linkID}</a>`);
+                        linksTags.push(`<a href="${entry.body.links[linkID]}" title="${entry.title.short} ${linkID}" tabIndex="${tabIndex}">${linkID}</a>`);
+                        tabIndex++;
                     });
                     const linksString = `\n${linksTags.join("&nbsp;&mdash;&nbsp;\n")}`;
 
