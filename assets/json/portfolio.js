@@ -85,7 +85,7 @@ const tileContent = {
                 many people, places, and objects found in the scrapbooks. A 
                 collaboration with researchers Bridget Moynihan and Anouk Lang 
                 at the University of Edinburgh, 'Working from Scraps' was funded 
-                by the government of Scotland.`,
+                by the Carnegie Trust for the Universities of Scotland.`,
                 links: {
 
                     "Main site": "http://digitaldecoupage.llc.ed.ac.uk/context/",
