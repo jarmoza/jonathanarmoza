@@ -309,7 +309,7 @@ const tileContent = {
             },
             body: {
 
-                text: `'Scribblenauts' is an action-adventure game by 5th cell media. that features a unique writing
+                text: `'Scribblenauts' is an action-adventure game by 5th cell media that features a unique writing
                 element that produces emergent gameplay. Players play as Maxwell, a character with a magic notebook,
                 which allows players to summon any object they wish into the game world via an on-screen keyboard. Thousands of items
                 were created for the game, each with physical properties that allowed them to interact with each other and
