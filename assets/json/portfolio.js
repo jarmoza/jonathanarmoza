@@ -212,7 +212,7 @@ const tileContent = {
 
                 short: "Neurobagel",
                 text: "Neurobagel",
-                date: "2021-present"
+                date: "2021-2023"
             },
             body: {
 
