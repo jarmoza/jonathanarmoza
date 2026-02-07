@@ -8,17 +8,15 @@ const tileContent = {
 
                 short: "The Art of Literary Modeling",
                 text: "The Art of Literary Modeling",
-                date: "2018-present"
+                date: "2018-2026"
             },
             body: {
 
-                text: `My PhD dissertation on the qualities of 'literary' modeling for digital humanities. Works examined include an array of 19th century American literature:
-                large collections from Hathi Trust and Project Gutenberg, the poems of Emily Dickinson, Melville's <i>Moby-Dick</i>, and the autobiography of Mark Twain.
-                Previews of some of the ideas in this work can be found on my <a href="https://jonathantalks.substack.com">Substack blog</a>.`,
+                text: `My PhD dissertation on data quality measurement and assessment for digital humanities. Works examined and measured include a set of Herman Melville's novels from Project Gutenberg, and over a dozen digital editions of Mark Twain's <i>Adventures of Huckleberry Finn</i> from the Internet Archive, Project Gutenberg, and Mark Twain Project Online.
+                Project documentation, a tutorial, and the upcoming research draft can be found in <a href="https://github.com/jarmoza/aolm_full">the project's repository on GitHub</a>.`,
                 links: {
 
-                    "Source code": "https://github.com/jarmoza/aolm",
-                    "Blog": "https://jonathantalks.substack.com"
+                    "Source code and documentation": "https://github.com/jarmoza/aolm_full"
                 },
                 screenshots: {
     
