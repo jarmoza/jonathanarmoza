@@ -16,7 +16,8 @@ const tileContent = {
                 Project documentation, a tutorial, and the upcoming research draft can be found in <a href="https://github.com/jarmoza/aolm_full">the project's repository on GitHub</a>.`,
                 links: {
 
-                    "Source code and documentation": "https://github.com/jarmoza/aolm_full"
+                    "Source code and documentation": "https://github.com/jarmoza/aolm_full",
+                    "Publication": "https://www.proquest.com/docview/3355452934?sourcetype=Dissertations%20&%20Theses"
                 },
                 screenshots: {
     
