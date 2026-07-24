@@ -6,14 +6,13 @@ const tileContent = {
             id: "aolm",
             title: {
 
-                short: "The Art of Literary Modeling",
-                text: "The Art of Literary Modeling",
+                short: "The Art of Literary Modeling: Data Quality",
+                text: "The Art of Literary Modeling: Data Quality",
                 date: "2018-2026"
             },
             body: {
 
-                text: `My PhD dissertation on data quality measurement and assessment for digital humanities. Works examined and measured include a set of Herman Melville's novels from Project Gutenberg, and over a dozen digital editions of Mark Twain's <i>Adventures of Huckleberry Finn</i> from the Internet Archive, Project Gutenberg, and Mark Twain Project Online.
-                Project documentation, a tutorial, and the upcoming research draft can be found in <a href="https://github.com/jarmoza/aolm_full">the project's repository on GitHub</a>.`,
+                text: `My PhD dissertation and accompanying research-software project develop a framework for measuring and assessing data quality in digital literary collections before computational analysis. The project applies six data-quality metrics to editions of works by Herman Melville, Mark Twain, and Emily Dickinson, using Python-based NLP and visualization pipelines to identify textual, metadata, and editorial differences. The complete dissertation is available through ProQuest; source code, documentation, tutorials, and reproducible analyses are available on GitHub.`,
                 links: {
 
                     "Source code and documentation": "https://github.com/jarmoza/aolm_full",
