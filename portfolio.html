@@ -54,7 +54,7 @@
 
         <div class="row mx-auto gx-10 py-5">
 
-            <!-- Verticl nav for quick access to portfolio items -->
+            <!-- Vertical nav for quick access to portfolio items -->
             <div class="col-sm-2 col-md-2 sticky-top">
                 <div class="row sticky-top">
                     <ul class="nav nav-pills flex-column" id="myTab" role="tablist">
@@ -86,7 +86,7 @@
         </div>
     </div>
 
-    <script src="./assets/json/portfolio.js"></script>
+    <script src="./assets/json/portfolio.js" defer></script>
 
     <script>
 
@@ -118,11 +118,11 @@
                 const tileHTML = [];
                 if ( !firstTabWritten ) {
 
-                    firstTabeWritten = true;
+                    firstTabWritten = true;
                     tileHTML.push(`<div class="tab-pane fade show active" id="${sectionID}" role="tabpanel" aria-current="page">`);
                 } else {
 
-                    tileHTML.push(`<div class="tab-pane fade" id="${sectionID}"" role="tabpanel">`);
+                    tileHTML.push(`<div class="tab-pane fade" id="${sectionID}" role="tabpanel">`);
                 }
                 
 
@@ -143,7 +143,7 @@
                     const screenshotsTags = [];
                     Object.keys(entry.body.screenshots).forEach(screenshotID => {
 
-                        screenshotsTags.push(`<img class="img-fluid" src="${entry.screenshots[screenshotID]}">`);
+                        screenshotsTags.push(`<img class="img-fluid" loading="lazy" src="${entry.body.screenshots[screenshotID]}">`);
                     });
                     const screenshotsString = screenshotsTags.join("\n");
 
@@ -171,7 +171,7 @@
                     // B. Card image
                     const cardImageTag = `
                         <div class="col-sm-3 mx-0 px-0 align-middle text-center">
-                            <img class="img-fluid card-image pt-2" src="${entry.image.link}" alt="${entry.image.altText}">
+                            <img class="img-fluid card-image pt-2" loading="lazy" src="${entry.image.link}" alt="${entry.image.altText}">
                         </div>`;
 
                     // A. Mobile
