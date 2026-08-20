@@ -12,7 +12,7 @@ const tileContent = {
             },
             body: {
 
-                text: `My PhD dissertation and accompanying research-software project develop a framework for measuring and assessing data quality in digital literary collections before computational analysis. The project applies six data-quality metrics to editions of works by Herman Melville and Mark Twain using a Python-based NLP and pipeline and data visualizations to identify textual, metadata, and editorial differences. The complete dissertation is available through ProQuest; source code, documentation, tutorials, and reproducible analyses are available on GitHub.`,
+                text: `My PhD dissertation and accompanying research-software project develop a framework for measuring and assessing data quality in digital literary collections before computational analysis. The project applies six data-quality metrics to editions of works by Herman Melville and Mark Twain using a Python-based NLP pipeline and data visualizations to identify textual, metadata, and editorial differences. The complete dissertation is available through ProQuest; source code, documentation, tutorials, and reproducible analyses are available on GitHub.`,
                 links: {
 
                     "Source code and documentation": "https://github.com/jarmoza/aolm_full",
